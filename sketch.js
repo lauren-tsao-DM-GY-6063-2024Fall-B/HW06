@@ -18,8 +18,8 @@ function setup() {
     let stemHeight = data.getNum(idx, "stem-height");
     let stemWidth = data.getNum(idx, "stem-width")
     let capDiameter = data.getNum(idx, "cap-diameter");
-    let h = map(stemHeight, 0, 20, 0, 400);
-    let thicc = map(stemWidth, 0, 20, 0, 3)
+    let h = map(stemHeight, 0, 20, 0, height - height/10);
+    let thicc = map(stemWidth, 0, 20, 0, 5)
     let d = map(capDiameter, 0, 200, 0, height);
     stroke(84, 71, 63);
     strokeWeight(thicc)
@@ -35,10 +35,10 @@ function setup() {
   }
 
   for (let xGrass = 0; xGrass < width; xGrass += 3) {
-    let lightG = color(203, 210, 164)
+    let lightG = color(140, 160, 72)
     let darkG = color(121, 134, 69)
     let strokeColor = random([lightG, darkG])
-    let grassHeight = random(410, 400)
+    let grassHeight = random(height - height/9, height - height/8)
     stroke(strokeColor)
     strokeWeight(3)
     line(xGrass, height - height/9, xGrass, grassHeight)
