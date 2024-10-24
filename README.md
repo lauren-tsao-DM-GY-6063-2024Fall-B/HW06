@@ -1,7 +1,7 @@
 ## Creative Coding (DM-GY 6063) - Programming: Week 06
 
 #### HW06:
-- Please click [here](https://github.com/lauren-tsao-DM-GY-6063-2024Fall-B/HW06)
+- Please click [here](https://lauren-tsao-dm-gy-6063-2024fall-b.github.io/HW06/HW06/)
 
 ### What dataset did you use? If not from our class site, include a link.
 - I used [this dataset](https://www.kaggle.com/datasets/vishalpnaik/mushroom-classification-edible-or-poisonous)
