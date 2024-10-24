@@ -10,51 +10,66 @@ function setup() {
 
   angleMode(DEGREES);
 
-  //mushrooms
+  //data
   for (let idx = 0; idx < data.getRowCount(); idx++) {
-    let x = map(
-      idx,
-      0,
-      data.getRowCount() - 1,
-      width / 3.9,
-      width - width / 25
-    );
     let capColor = data.getString(idx, "cap-color");
     let stemHeight = data.getNum(idx, "stem-height");
     let stemWidth = data.getNum(idx, "stem-width");
     let capDiameter = data.getNum(idx, "cap-diameter");
-    let bruiseOrbleed = data.getString(idx, "does-bruise-or-bleed")
-    let h = map(stemHeight, 0, 20, 0, height - height / 10);
+    let bruiseOrbleed = data.getString(idx, "does-bruise-or-bleed");
+    let h = map(stemHeight, 0, 20, 0, height);
     let thicc = map(stemWidth, 10, 20, 0, 1);
-    let d = map(capDiameter, 0, 20, 0, height);
+    let dAngle = map(capDiameter, 0, 19, 0, 360);
+    let d = map(capDiameter, 0, 19, 0, height / 3.5);
 
+
+    //cap diameter and color
     push();
-    noFill();
+    noStroke();
     if (capColor.includes("o")) {
-      stroke(128, 136, 54);
-    } else if (capColor.includes("e")) {
-      stroke(255, 191, 0);
-    }  else if (capColor.includes("n")) {
-      stroke(255, 130, 37);
-    } else if (capColor.includes("g")) {
-      stroke(255, 154, 0);
-    } else if (capColor.includes("r")) {
-      stroke(209, 3, 99);
+      //yellow
+      fill(255, 191, 0);
+      arc(width / 2, height / 2, d, d, 0, dAngle);
+    } 
+    
+     //pale orange
+    else if (capColor.includes("e")) {
+    fill(255, 154, 0);
+    arc(width / 2, height / 2, d, d, 0, dAngle);
+    } 
+    
+    //light yellow
+    else if (capColor.includes("g")) {
+    fill(254, 238, 145);
+    arc(width / 2, height / 2, d, d, 0, dAngle);
+    } 
+    
+    //orange
+    else if (capColor.includes("n")) {
+      fill(255, 101, 50);
+      arc(width / 2, height / 2, d, d, 0, dAngle);
+    } 
+    
+    //pink
+    else if (capColor.includes("r")) {
+      fill(209, 3, 99);
+      arc(width / 2, height / 2, d, d, 0, dAngle);
     }
 
-    arc(width / 4, height / 2, d, d, 90, 270);
     pop();
 
-    push()
+    //stem height and bruise-or-bleed
+    push();
     noFill();
     strokeWeight(thicc);
     if (bruiseOrbleed.includes("f")) {
       stroke(82, 34, 88);
     } else if (bruiseOrbleed.includes("t")) {
-      stroke(200, 0 ,54);
+      stroke(200, 0, 54);
     }
-    line(x, height / 5, x, h);
-    pop()
+    arc(width / 2, height / 2, h, h, 0, h);
+
+    pop();
   }
 }
 function draw() {}
