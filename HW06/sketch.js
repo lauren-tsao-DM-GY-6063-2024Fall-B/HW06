@@ -26,13 +26,14 @@ function setup() {
     //cap diameter and color
     push();
     noStroke();
+
+    //yellow
     if (capColor.includes("o")) {
-      //yellow
       fill(255, 191, 0);
       arc(width / 2, height / 2, d, d, 0, dAngle);
     } 
     
-     //pale orange
+    //pale orange
     else if (capColor.includes("e")) {
     fill(255, 154, 0);
     arc(width / 2, height / 2, d, d, 0, dAngle);
