@@ -23,4 +23,4 @@
 - does-bruise-or-bleed fields: Indicated by the purple (bruise) and red (red) colors of the stem strokes
 
 ### Include drawings and images of reference visualizations
-- please click here [here](https://drive.google.com/drive/folders/1vJJj1AjSkqe3kdFFRTN1iMNwsjVd7u2I?usp=sharing)
+- please click [here](https://drive.google.com/drive/folders/1vJJj1AjSkqe3kdFFRTN1iMNwsjVd7u2I?usp=sharing)
